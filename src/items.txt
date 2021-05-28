@@ -1,0 +1,3 @@
+Rice, Food, 5 kg, 15
+Pudding, Food, 1, 1
+Banana, Food, 16, 10
