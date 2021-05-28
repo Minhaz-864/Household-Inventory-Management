@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.4080882352941176" prefHeight="451.0" prefWidth="614.0" style="-fx-background-color: LIGHTSEAGREEN; -fx-border-color: WHITESMOKE;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="199.0" SplitPane.resizableWithParent="false">
+         <children>
+            <Button id="add" fx:id="add" layoutX="99.0" layoutY="160.0" mnemonicParsing="false" onAction="#WriteItem" prefHeight="26.0" prefWidth="93.0" text="Add" />
+            <Button fx:id="delete" layoutX="10.0" layoutY="199.0" mnemonicParsing="false" onAction="#DeleteItem" prefHeight="26.0" prefWidth="58.0" text="Delete" />
+            <Button fx:id="search" layoutX="172.0" layoutY="241.0" mnemonicParsing="false" onAction="#Searched" text="Search" />
+            <TextField fx:id="name" alignment="BOTTOM_LEFT" layoutX="77.0" layoutY="10.0" promptText="Apple" style="-fx-background-color: grey; -fx-border-color: shadow;" />
+            <TextField fx:id="type" alignment="BOTTOM_LEFT" layoutX="77.0" layoutY="48.0" promptText="Food" style="-fx-background-color: grey;" />
+            <TextField fx:id="quantity" alignment="BOTTOM_LEFT" layoutX="77.0" layoutY="84.0" promptText="2 Kg" style="-fx-background-color: grey;" />
+            <TextField fx:id="ttl" alignment="BOTTOM_LEFT" layoutX="77.0" layoutY="123.0" promptText="In Days" style="-fx-background-color: grey;" />
+            <TextField fx:id="row" layoutX="78.0" layoutY="199.0" promptText="Select/Type to Delete" style="-fx-background-color: grey;" />
+            <Label layoutX="10.0" layoutY="52.0" prefHeight="18.0" prefWidth="50.0" text="Type:" />
+            <Label layoutX="10.0" layoutY="14.0" prefHeight="18.0" prefWidth="50.0" text="Name:" />
+            <Label layoutX="6.0" layoutY="87.0" prefHeight="18.0" prefWidth="58.0" text="Quantity:" />
+            <Label layoutX="5.0" layoutY="122.0" prefHeight="26.0" prefWidth="71.0" text="Time to last:" />
+            <Label layoutX="10.0" layoutY="254.0" text="Row:" textFill="#faf9f9" />
+            <TextField fx:id="searchText" alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="241.0" prefHeight="26.0" prefWidth="150.0" promptText="Search" style="-fx-background-color: grey;" />
+            <ListView fx:id="reminderList" layoutX="-1.0" layoutY="335.0" prefHeight="110.0" prefWidth="246.0" />
+            <DatePicker fx:id="datePick" layoutX="65.0" layoutY="303.0" promptText="MM/DD/YYYY" style="-fx-background-color: grey;" />
+            <TextField fx:id="remindTopic" layoutX="71.0" layoutY="273.0" promptText="Topic" style="-fx-background-color: grey;" />
+            <Label layoutX="23.0" layoutY="307.0" text="Date" />
+            <Button fx:id="remindThis" layoutX="13.0" layoutY="273.0" mnemonicParsing="false" onAction="#reminderBox" text="Remind" />
+         </children></AnchorPane>
+    <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="365.0" SplitPane.resizableWithParent="false">
+         <children>
+            <ListView fx:id="listView" layoutY="42.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="358.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Label alignment="CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="33.0" prefWidth="351.0" text="Available Items">
+               <font>
+                  <Font size="21.0" />
+               </font></Label>
+            <Label layoutX="14.0" layoutY="23.0" mouseTransparent="true" text="Name" textOverrun="LEADING_ELLIPSIS" underline="true" wrapText="true" />
+            <Label layoutX="60.0" layoutY="23.0" text="Type" />
+            <Label layoutX="103.0" layoutY="23.0" text="Quantity" />
+            <Label layoutX="172.0" layoutY="23.0" text="Days to last" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>
